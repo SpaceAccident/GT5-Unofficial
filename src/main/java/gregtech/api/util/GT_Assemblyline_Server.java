@@ -230,7 +230,7 @@ public class GT_Assemblyline_Server {
 									Materials.Tantalum,
 									Materials.Tellurium,
 									Materials.Terbium,
-									Materials.Thaumium,
+									null,
 									Materials.Thorium,
 									Materials.Thulium,
 									Materials.Tin,

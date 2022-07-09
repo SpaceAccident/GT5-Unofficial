@@ -287,7 +287,6 @@ public class GT_RecipeRegistrator {
             IronWood,
             Steeleaf,
             Knightmetal,
-            Thaumium,
             DarkSteel,
     };
 

@@ -157,20 +157,20 @@ public class GT_Client extends GT_Proxy
         mAnimationTick = 0L;
         mAnimationDirection = false;
         mPosR = Arrays.asList(Materials.Enderium, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.Force,
-                Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.Thaumium, Materials.InfusedVis, Materials.InfusedAir, Materials.InfusedFire, Materials.FierySteel, Materials.Firestone);
+                Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.InfusedVis, Materials.InfusedAir, Materials.InfusedFire, Materials.FierySteel, Materials.Firestone);
         mPosG = Arrays.asList(Materials.Enderium, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.Force,
                 Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.InfusedAir, Materials.InfusedEarth);
         mPosB = Arrays.asList(Materials.Enderium, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.InfusedVis,
-                Materials.InfusedWater, Materials.Thaumium);
+                Materials.InfusedWater);
         mNegR = Arrays.asList(Materials.InfusedEntropy, Materials.NetherStar);
         mNegG = Arrays.asList(Materials.InfusedEntropy, Materials.NetherStar);
         mNegB = Arrays.asList(Materials.InfusedEntropy, Materials.NetherStar);
         mMoltenPosR = Arrays.asList(Materials.Enderium, Materials.NetherStar, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.Force,
-                Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.Thaumium, Materials.InfusedVis, Materials.InfusedAir, Materials.InfusedFire, Materials.FierySteel, Materials.Firestone);
+                Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.InfusedVis, Materials.InfusedAir, Materials.InfusedFire, Materials.FierySteel, Materials.Firestone);
         mMoltenPosG = Arrays.asList(Materials.Enderium, Materials.NetherStar, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.Force,
                 Materials.Pyrotheum, Materials.Sunnarium, Materials.Glowstone, Materials.InfusedAir, Materials.InfusedEarth);
         mMoltenPosB = Arrays.asList(Materials.Enderium, Materials.NetherStar, Materials.Vinteum, Materials.Uranium235, Materials.InfusedGold, Materials.Plutonium241, Materials.NaquadahEnriched, Materials.Naquadria, Materials.InfusedOrder, Materials.InfusedVis,
-                Materials.InfusedWater, Materials.Thaumium);
+                Materials.InfusedWater);
         mMoltenNegR = Collections.singletonList(Materials.InfusedEntropy);
         mMoltenNegG = Collections.singletonList(Materials.InfusedEntropy);
         mMoltenNegB = Collections.singletonList(Materials.InfusedEntropy);

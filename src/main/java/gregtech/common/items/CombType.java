@@ -34,7 +34,7 @@ public enum CombType {
     ENDERIUM(20, "enderium", true, Materials.Enderium, 40, 0x2E8B57, 0x599087),
 
     //Thaumcraft Line
-    THAUMIUMDUST(21, "thaumiumdust", true, Materials.Thaumium, 100, 0x7A007A, 0x5C005C),
+    THAUMIUMDUST(21, "thaumiumdust", true, Materials._NULL, 100, 0x7A007A, 0x5C005C),
     THAUMIUMSHARD(22, "thaumiumshard", true, Materials._NULL, 85, 0x9966FF, 0xAD85FF),
     AMBER(23, "amber", true, Materials.Amber, 90, 0x774B15, 0xEE7700),
     QUICKSILVER(24, "quicksilver", true, Materials.Mercury, 90, 0xc7c7ea, 0xb5b3df),
