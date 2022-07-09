@@ -272,16 +272,16 @@ public class GT_Loader_Item_Block_And_Fluid implements Runnable {
             Materials.Holmium,
             Materials.HSLA,
             Materials.Indium,
-            Materials.InfusedGold,
+            Materials._NULL,
             Materials.Invar,
             Materials.Iridium,
             Materials.IronMagnetic,
-            Materials.IronWood,
+            Materials._NULL,
             Materials.Kanthal
         }, OrePrefixes.block, gregtech.api.enums.Textures.BlockIcons.STORAGE_BLOCKS3);
 
         GregTech_API.sBlockMetal4 = new GT_Block_Metal("gt.blockmetal4", new Materials[]{
-            Materials.Knightmetal,
+            Materials._NULL,
             Materials.Lanthanum,
             Materials.Lead,
             Materials.Lutetium,
@@ -334,7 +334,7 @@ public class GT_Loader_Item_Block_And_Fluid implements Runnable {
             Materials.StainlessSteel,
             Materials.Steel,
             Materials.SteelMagnetic,
-            Materials.SterlingSilver
+            Materials._NULL
         }, OrePrefixes.block, gregtech.api.enums.Textures.BlockIcons.STORAGE_BLOCKS6);
 
         GregTech_API.sBlockMetal7 = new GT_Block_Metal("gt.blockmetal7", new Materials[]{
@@ -743,12 +743,7 @@ public class GT_Loader_Item_Block_And_Fluid implements Runnable {
         GT_ModHandler.addPulverisationRecipe(new ItemStack(Blocks.gravel, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 1L), new ItemStack(Items.flint, 1), 10, false);
         GT_ModHandler.addPulverisationRecipe(new ItemStack(Blocks.furnace, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 8L), null, 0, false);
         GT_ModHandler.addPulverisationRecipe(new ItemStack(Blocks.lit_furnace, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 8L), null, 0, false);
-
-        GT_OreDictUnificator.set(OrePrefixes.ingot, Materials.FierySteel, GT_ModHandler.getModItem("TwilightForest", "item.fieryIngot", 1L, 0));
-        GT_OreDictUnificator.set(OrePrefixes.ingot, Materials.Knightmetal, GT_ModHandler.getModItem("TwilightForest", "item.knightMetal", 1L, 0));
-        GT_OreDictUnificator.set(OrePrefixes.ingot, Materials.Steeleaf, GT_ModHandler.getModItem("TwilightForest", "item.steeleafIngot", 1L, 0));
-        GT_OreDictUnificator.set(OrePrefixes.ingot, Materials.IronWood, GT_ModHandler.getModItem("TwilightForest", "item.ironwoodIngot", 1L, 0));
-
+        
         GT_OreDictUnificator.set(OrePrefixes.ingot, Materials.BloodInfusedIron, GT_ModHandler.getModItem("BloodArsenal", "blood_infused_iron", 1L, 0));
 
         if (GregTech_API.sUnification.get(ConfigCategories.specialunificationtargets + "." + "railcraft", "plateIron", true)) {

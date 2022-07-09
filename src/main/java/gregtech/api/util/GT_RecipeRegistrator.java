@@ -277,16 +277,12 @@ public class GT_RecipeRegistrator {
             Gold,
             Iron,
             Lead,
-            FierySteel,
             Void,
             Bronze,
             Diamond,
             Ruby,
             Sapphire,
             Steel,
-            IronWood,
-            Steeleaf,
-            Knightmetal,
             DarkSteel,
     };
 
