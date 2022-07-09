@@ -342,7 +342,7 @@ public class GT_Loader_Item_Block_And_Fluid implements Runnable {
             Materials.Tantalum,
             Materials.Tellurium,
             Materials.Terbium,
-            null,
+            Materials._NULL, //Thaumium
             Materials.Thorium,
             Materials.Thulium,
             Materials.Tin,
