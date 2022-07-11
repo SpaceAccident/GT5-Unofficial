@@ -68,6 +68,22 @@ public class GT_ContainerMetaTile_Machine extends GT_Container {
             aInventoryPlayer.player.openContainer = aInventoryPlayer.player.inventoryContainer;
         }
     }
+    
+    public GT_ContainerMetaTile_Machine(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, int aPlayerInventoryXOffset, int aPlayerInventoryYOffset, boolean initEvertyhing) {
+        super(aInventoryPlayer, aTileEntity, aPlayerInventoryXOffset, aPlayerInventoryYOffset);
+        
+        mTileEntity = aTileEntity;
+        
+        if(initEvertyhing) {
+            if (mTileEntity != null && mTileEntity.getMetaTileEntity() != null) {
+                addSlots(aInventoryPlayer);
+                if (doesBindPlayerInventory()) bindPlayerInventory(aInventoryPlayer);
+                detectAndSendChanges();
+            } else {
+                aInventoryPlayer.player.openContainer = aInventoryPlayer.player.inventoryContainer;
+            }
+        }
+    }
 
     @Override
     public void detectAndSendChanges() {

@@ -24,12 +24,21 @@ import java.util.List;
 public class GT_Container extends Container {
     public IGregTechTileEntity mTileEntity;
     public InventoryPlayer mPlayerInventory;
+    
+    protected int mXOffset = 0, mYOffset = 0;
 
     public GT_Container(InventoryPlayer aPlayerInventory, IGregTechTileEntity aTileEntityInventory) {
 
         mTileEntity = aTileEntityInventory;
         mPlayerInventory = aPlayerInventory;
         mTileEntity.openInventory();
+    }
+    
+    public GT_Container(InventoryPlayer aPlayerInventory, IGregTechTileEntity aTileEntityInventory, int aPlayerInventoryXOffset, int aPlayerInventoryYOffset){
+        this(aPlayerInventory, aTileEntityInventory);
+        mXOffset = aPlayerInventoryXOffset;
+        mYOffset = aPlayerInventoryYOffset;
+        
     }
 
     /**
@@ -89,16 +98,20 @@ public class GT_Container extends Container {
     public boolean canInteractWith(EntityPlayer aPlayer) {
         return false;
     }
-
-    protected void bindPlayerInventory(InventoryPlayer aInventoryPlayer) {
+    
+    protected void bindPlayerInventory(InventoryPlayer inventoryPlayer) {
+        bindPlayerInventory(inventoryPlayer, mXOffset, mYOffset);
+    }
+    
+    protected void bindPlayerInventory(InventoryPlayer aInventoryPlayer, int xOffset, int yOffset) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlotToContainer(new Slot(aInventoryPlayer, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                addSlotToContainer(new Slot(aInventoryPlayer, j + i * 9 + 9, xOffset+ 8 + j * 18, yOffset + 84 + i * 18));
             }
         }
-
+        
         for (int i = 0; i < 9; i++) {
-            addSlotToContainer(new Slot(aInventoryPlayer, i, 8 + i * 18, 142));
+            addSlotToContainer(new Slot(aInventoryPlayer, i, xOffset+ 8 + i * 18, yOffset + 142));
         }
     }
 
@@ -264,7 +277,9 @@ public class GT_Container extends Container {
             aSlot = (Slot) this.inventorySlots.get(aSlotIndex);
             if (aSlot != null && aSlot.getHasStack()) {
                 tTempStack = GT_Utility.copyOrNull(aSlot.getStack());
-                tTempStack.stackSize = tTempStack.getMaxStackSize();
+                if (tTempStack != null) {
+                    tTempStack.stackSize = tTempStack.getMaxStackSize();
+                }
                 aPlayerInventory.setItemStack(tTempStack);
             }
         }
